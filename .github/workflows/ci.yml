@@ -1,0 +1,31 @@
+name: projetoGitActions
+
+on:
+  push:
+    branches:
+        - main
+  pull_request:
+    branches: 
+        - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+        - name: Checkout do código
+          uses: actions/checkout@v4
+        
+        - name: Configuração do Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: '16'
+
+        - name: Instalação de dependências e execução dos testes
+          run: npm install
+
+        - name: Verificar o caminho do Mocha
+          run: ls -l ./node_modules/.bin/mocha
+
+        - name: Execução dos testes
+          run: npx mocha
