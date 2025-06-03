@@ -6,6 +6,7 @@ class Carrinho{
     }
 
     adicionarItem(item){
+        this.itens.push(item)
     }
 }
 
