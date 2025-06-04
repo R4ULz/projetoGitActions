@@ -68,4 +68,15 @@ describe('Carrinho de compras', () => {
         
         assert.strictEqual(carrinho.itens.length, 0);
     });
+    it('deve atualizar a quantidade de um item no carrinho', () => {
+        const carrinho = new Carrinho();
+        const item = { nome: 'Produto 1', preco: 100, };
+
+        carrinho.adicionarItem(item);
+        carrinho.atualizarQuantidadeItem('Produto 1', 2);
+
+        const itens = carrinho.listarItens();
+        
+        assert.strictEqual(itens[0].quantidade, 2);
+    });
 })
