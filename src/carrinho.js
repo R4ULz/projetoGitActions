@@ -30,7 +30,14 @@ class Carrinho{
     }
 
     removerItem(nome){
-        
+        // if(!nome) {
+        //     throw new Error('Digite um nome válido');
+        // }
+        // const index = this.itens.findIndex(item => item.nome === nome);
+        // if(index === -1) {
+        //     throw new Error('Item não encontrado no carrinho');
+        // }
+        // this.itens.splice(index, 1);
     }
 
     limparCarrinho(){
