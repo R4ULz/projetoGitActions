@@ -50,17 +50,15 @@ class Carrinho{
     }
 
     atualizarQuantidadeItem(nome, novaQuantidade){
-        // if(!nome || typeof novaQuantidade !== 'number' || novaQuantidade <= 0) {
-        //     throw new Error('Digite um nome e quantidade válidos');
-        // }
-        // const item = this.itens.find(item => item.nome === nome);
-        // if(!item) {
-        //     throw new Error('Item não encontrado no carrinho');
-        // }
-        // item.quantidade = novaQuantidade;
+        if(!nome || typeof novaQuantidade !== 'number' || novaQuantidade <= 0) {
+            throw new Error('Digite um nome e quantidade válidos');
+        }
+        const item = this.itens.find(item => item.nome === nome);
+        if(!item) {
+            throw new Error('Item não encontrado no carrinho');
+        }
+        item.quantidade = novaQuantidade;
     }
-
-
 }
 
 module.exports = Carrinho;
