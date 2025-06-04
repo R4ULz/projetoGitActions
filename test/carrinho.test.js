@@ -4,7 +4,7 @@ const  Carrinho  = require('../src/carrinho');
 describe('Carrinho de compras', () => {
     it('deve adicionar um item ao carrinho', () => {
         const carrinho = new Carrinho();
-        const item = { nome: 'Produto 1', preco: 100, quantidade: 2 };
+        const item = { nome: 'Produto 1', preco: 100, };
         
         carrinho.adicionarItem(item);
         assert.strictEqual(carrinho.itens.length, 1);
@@ -13,8 +13,8 @@ describe('Carrinho de compras', () => {
 
     it('deve listar os itens do carrinho', () => {
         const carrinho = new Carrinho();
-        const item1 = { nome: 'Produto 1', preco: 100, quantidade: 3 };
-        const item2 = { nome: 'Produto 2', preco: 50, quantidade: 2 };
+        const item1 = { nome: 'Produto 1', preco: 100 };
+        const item2 = { nome: 'Produto 2', preco: 50, };
 
         carrinho.adicionarItem(item1);
         carrinho.adicionarItem(item2);
@@ -41,8 +41,8 @@ describe('Carrinho de compras', () => {
 
     it('deve remover um item do carrinho', () => {
         const carrinho = new Carrinho();
-        const item1 = { nome: 'Produto 1', preco: 100, quantidade: 1 };
-        const item2 = { nome: 'Produto 2', preco: 50, quantidade: 2 };
+        const item1 = { nome: 'Produto 1', preco: 100, };
+        const item2 = { nome: 'Produto 2', preco: 50, };
 
         carrinho.adicionarItem(item1);
         carrinho.adicionarItem(item2);
@@ -58,8 +58,8 @@ describe('Carrinho de compras', () => {
     it('deve remover todos os itens do carrinho', () => {
 
         const carrinho = new Carrinho();
-        const item1 = { nome: 'Produto 1', preco: 100, quantidade: 1 };
-        const item2 = { nome: 'Produto 2', preco: 50, quantidade: 3 };
+        const item1 = { nome: 'Produto 1', preco: 100, };
+        const item2 = { nome: 'Produto 2', preco: 50, };
 
         carrinho.adicionarItem(item1);
         carrinho.adicionarItem(item2);
