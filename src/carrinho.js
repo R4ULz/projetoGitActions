@@ -30,6 +30,7 @@ class Carrinho{
     }
 
     removerItem(nome){
+        
     }
 
     limparCarrinho(){
