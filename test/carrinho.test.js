@@ -25,4 +25,17 @@ describe('Carrinho de compras', () => {
         assert.deepStrictEqual(itens[0], item1);
         assert.deepStrictEqual(itens[1], item2);
     });
+
+    it('deve calcular o total do carrinho', () => {
+        const carrinho = new Carrinho();
+        const item1 = { nome: 'Produto 1', preco: 100 };
+        const item2 = { nome: 'Produto 2', preco: 50 };
+
+        carrinho.adicionarItem(item1);
+        carrinho.adicionarItem(item2);
+
+        const total = carrinho.calcularTotal();
+
+        assert.strictEqual(total, 150);
+    });
 })
