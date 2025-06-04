@@ -10,7 +10,7 @@ class Carrinho{
     }
 
     listarItens() {
-        // return this.itens;
+        return this.itens;
     }
 
     calcularTotal(){
