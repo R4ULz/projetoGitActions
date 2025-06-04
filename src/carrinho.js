@@ -6,7 +6,7 @@ class Carrinho{
     }
 
     adicionarItem(item){
-        if(!item || !item.nome || !item.preco) {
+        if(!item || !item.nome || !item.preco || item.quantidade) {
             throw new Error('Digite um item válido');
         }else{
             this.itens.push(item);
@@ -41,7 +41,11 @@ class Carrinho{
     }
 
     limparCarrinho(){
-        
+        if(!this.itens.length) {
+            throw new Error('Carrinho já está vazio');
+        }
+        this.itens = [];
+        this.total = 0;
     }
 
     atualizarQuantidadeItem(nome, novaQuantidade){
