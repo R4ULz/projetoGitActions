@@ -41,7 +41,7 @@ class Carrinho{
     }
 
     limparCarrinho(){
-
+        
     }
 
     atualizarQuantidadeItem(nome, novaQuantidade){

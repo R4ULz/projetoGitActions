@@ -39,7 +39,7 @@ describe('Carrinho de compras', () => {
         assert.strictEqual(total, 150);
     });
 
-    it('deve remover itens do carrinho', () => {
+    it('deve remover um item do carrinho', () => {
         const carrinho = new Carrinho();
         const item1 = { nome: 'Produto 1', preco: 100 };
         const item2 = { nome: 'Produto 2', preco: 50 };
@@ -53,5 +53,19 @@ describe('Carrinho de compras', () => {
         
         assert.strictEqual(itens.length, 1);
         assert.deepStrictEqual(itens[0], item2);
+    });
+
+    it('deve remover todos os itens do carrinho', () => {
+
+        const carrinho = new Carrinho();
+        const item1 = { nome: 'Produto 1', preco: 100 };
+        const item2 = { nome: 'Produto 2', preco: 50 };
+
+        carrinho.adicionarItem(item1);
+        carrinho.adicionarItem(item2);
+        
+        carrinho.limparCarrinho();
+        
+        assert.strictEqual(carrinho.itens.length, 0);
     });
 })
