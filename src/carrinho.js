@@ -8,6 +8,26 @@ class Carrinho{
     adicionarItem(item){
         this.itens.push(item)
     }
+
+    listarItens() {
+        // return this.itens;
+    }
+
+    calcularTotal(){
+    }
+
+    removerItem(nome){
+    }
+
+    limparCarrinho(){
+
+    }
+
+    atualizarQuantidadeItem(nome, novaQuantidade){
+
+    }
+
+
 }
 
 module.exports = Carrinho;
